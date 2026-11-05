@@ -11,5 +11,11 @@
 <p>Перевірка підключення домену до віджета more-turov. Не сайт турагентства.</p>
 <div data-toursearch data-locale="ua"></div>
 <script src="https://more-turov.pro/widget/loader.js" data-site="mt_5ex6tf1jymhryknz" async></script>
+  <script>
+  document.addEventListener('toursearch:order', function (event) {
+    event.preventDefault()
+    alert('Заказ принят сайтом: ' + event.detail.offer_code)
+  })
+</script>
 </body>
 </html>
